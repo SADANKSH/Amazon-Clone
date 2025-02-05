@@ -1,8 +1,44 @@
 *{
     margin: 0;
     font-family: Arial;
+    border: border-box;
 }
 
-.main{
-    border: 2px solid black;
+.loginbox{
+    border:2px solid black;
+    width:240px ;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 400px;
+}
+
+.signin{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.credentials{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.inputbox{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.button{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.newuser{
+    margin-top: 100px;
+    margin-left: 430px;
 }
