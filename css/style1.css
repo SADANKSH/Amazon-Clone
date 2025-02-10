@@ -32,13 +32,19 @@
     margin-bottom: 20px;
 }
 
-.button{
+.buttons{
     margin-top: 20px;
     margin-left: 80px;
     margin-bottom: 20px;
+    border: 1px orange;
 }
 
 .newuser{
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 430px;
+}
+
+.line{
+    margin-top: 40px;
+    border: 2px solid black;
 }
