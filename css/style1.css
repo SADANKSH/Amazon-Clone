@@ -39,6 +39,9 @@
     border: 1px orange;
 }
 
+button{
+   background-color : orange;
+}
 .newuser{
     margin-top: 70px;
     margin-left: 430px;
