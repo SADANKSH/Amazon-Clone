@@ -36,11 +36,11 @@
     margin-top: 20px;
     margin-left: 80px;
     margin-bottom: 20px;
-    border: 1px orange;
 }
 
 button{
-   background-color : orange;
+   background-color : #FFD814;
+   border-radius: 12px;
 }
 .newuser{
     margin-top: 70px;

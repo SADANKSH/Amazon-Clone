@@ -4,6 +4,10 @@
     border: border-box;
 }
 
+.main{
+    background-color: black;
+}
+
 .navbar{
     height: 60px;
     background-color: #0f1111;
@@ -182,4 +186,10 @@
 
 .highlight:hover{
     border: 2px solid black;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
 }
