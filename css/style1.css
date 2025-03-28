@@ -1,60 +1,153 @@
 *{
     margin: 0;
-    font-family: Arial;
-    border: border-box;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-.logo{
-        background-image: url("img/logo\ n.png");
-        background-size: cover;
-        height: 330px;
-        width: 500px;
-        margin-left: 300px;
-}
-.loginbox{
-    border:2px solid black;
-    width:240px ;
-    border-radius: 20px;
-    margin-top: 100px;
-    margin-left: 400px;
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.signin{
-    margin-top: 20px;
-    margin-left: 10px;
+header {
+    background-color: #131921;
+    height: 60px;
+    position: relative;
+}
+
+.login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.logo {
+    background-image: url("img/logo\ n.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
+    width: 160px;
+    margin: 20px 0;
+}
+
+.loginbox {
+    border: 1px solid #ddd;
+    width: 350px;
+    border-radius: 4px;
+    padding: 20px 26px;
+    margin: 10px auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.signin {
     margin-bottom: 20px;
-    font-size: 1.2rem;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.credentials, .pass {
+    margin-bottom: 4px;
     font-weight: 700;
+    font-size: 13px;
 }
 
-.credentials{
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+.inputbox, .pass1 {
+    margin-bottom: 14px;
+    width: 100%;
 }
 
-.inputbox{
-    margin-top: 20px;
-    margin-left: 30px;
-    margin-bottom: 20px;
+.inputbox input, .pass1 input {
+    width: 100%;
+    height: 31px;
+    padding: 3px 7px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: none;
+    font-size: 13px;
 }
 
-.Util{
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-bottom: 20px;
+.Util {
+    margin-top: 18px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-button{
-   background-color : #FFD814;
-   border-radius: 12px;
-}
-.newuser{
-    margin-top: 70px;
-    margin-left: 430px;
+.Util button {
+    width: 100%;
+    height: 31px;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    color: #111;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
-.line{
-    margin-top: 40px;
-    border: 2px solid black;
+.line {
+    margin: 25px 0;
+    width: 350px;
+    border: none;
+    border-top: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.line::before {
+    content: "New to Amazon?";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f3f3f3;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #767676;
+}
+
+.newuser {
+    margin: 5px auto;
+    width: 350px;
+    text-align: center;
+}
+
+.newuser button {
+    width: 100%;
+    height: 31px;
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    color: #111;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .loginbox, .line, .newuser {
+        width: 90%;
+        max-width: 350px;
+    }
 }

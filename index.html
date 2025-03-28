@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon-Sadanksh Gangrade Clone</title>
+    <title>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="css/img/favicon.ico">
 </head>
 
 <body>
@@ -26,50 +27,185 @@
             <div class="nav-search">
                 <select class="search-select">
                     <option>All</option>
+                    <option>Electronics</option>
+                    <option>Books</option>
+                    <option>Fashion</option>
+                    <option>Computers</option>
+                    <option>Home</option>
                 </select>
                 <input placeholder="Search Amazon" class="search-input">
                 <div class="search-icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
-            <a href="signin.html"><div class="nav-signin border">
-                <p><span>Hello,Sign in</span></p>
-                <p class="nav-second">Accounts and Lists</p></a>
+            <div class="nav-language border">
+                <img src="css/img/us-flag.png" class="flag-icon">
+                <select class="language-select">
+                    <option>EN</option>
+                </select>
             </div>
 
+            <a href="signin.html">
+                <div class="nav-signin border">
+                    <p class="nav-first">Hello, sign in</p>
+                    <p class="nav-second">Account & Lists</p>
+                </div>
+            </a>
+
             <div class="returns border">
-                <p><span>Returns</span></p>
+                <p class="nav-first">Returns</p>
                 <p class="nav-second">& Orders</p>
             </div>
 
             <div class="nav-cart border">
                 <i class="fa-solid fa-cart-shopping"></i>
-                Cart
+                <p class="cart-text">Cart</p>
             </div>
         </div>
         <div class="mainbar">
-            <span class="border"><i class="fa-solid fa-bars"> All</i></span>
-            <span class="border">Today's Deal</span>
-            <span class="border"> Customer Service</span>
-            <span class="border">Registry</span>
-            <span class="border">Gift Cards</span>
-            <span class="border">Sell</span>
+            <div class="all-menu border">
+                <i class="fa-solid fa-bars"></i>
+                <span>All</span>
+            </div>
+            <div class="main-menu">
+                <span class="border">Today's Deals</span>
+                <span class="border">Customer Service</span>
+                <span class="border">Registry</span>
+                <span class="border">Gift Cards</span>
+                <span class="border">Sell</span>
+                <span class="border">Prime</span>
+            </div>
+            <div class="deals-menu">
+                <span class="border deals">Shop deals in Electronics</span>
+            </div>
         </div>
     </header>
+
     <main>
-        <div class="background"></div>
-        <span class="text highlight">
-            You are currently on Amazon.com,you can visit Amazon India.
-        </span>
-        <div class="pageend">
-            <div class="gaming highlight">Get Your Game On</div>
-            <div class="toys highlight">Gets Best Deals On Toys</div>
+        <div class="hero-section">
+            <div class="background"></div>
+            <div class="hero-message">
+                <span class="text-note">You are on Amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.</span>
+                <a href="#" class="text-link">Click here to go to amazon.in</a>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <h2>Gaming accessories</h2>
+                <div class="product-image gaming"></div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+            <div class="product-card">
+                <h2>Toys under $30</h2>
+                <div class="product-image toys"></div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+            <div class="product-card">
+                <h2>Home & Kitchen</h2>
+                <div class="product-image home"></div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+
+            <div class="product-card">
+                <h2>Health & Personal Care</h2>
+                <div class="product-image health"></div>
+                <a href="#" class="card-link">See more</a>
+            </div>
+        </div>
+
+        <div class="products-carousel">
+            <h2 class="carousel-title">Top Sellers in Books for you</h2>
+            <div class="carousel-container">
+                <div class="carousel-items">
+                    <div class="carousel-item">
+                        <img src="css/img/book1.jpg" alt="Book 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="css/img/book2.jpg" alt="Book 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="css/img/book3.jpg" alt="Book 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="css/img/book4.jpg" alt="Book 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="css/img/book5.jpg" alt="Book 5">
+                    </div>
+                </div>
+                <button class="carousel-control prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-control next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="sign-in-section">
+            <div class="sign-in-container">
+                <h2>Sign in for the best experience</h2>
+                <a href="signin.html" class="sign-in-button">Sign in securely</a>
+            </div>
+            <div class="advertisement">
+                <img src="css/img/ad.jpg" alt="Advertisement">
+            </div>
         </div>
     </main>
 
     <footer>
-        <div class="copyright">All Rights Reserved by Sadanksh Gangrade</div>
+        <div class="back-to-top">
+            <a href="#top">Back to top</a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Devices</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Make Money with Us</h3>
+                <ul>
+                    <li><a href="#">Sell products on Amazon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Amazon Payment Products</h3>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Let Us Help You</h3>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Returns & Replacements</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-secondary">
+            <div class="footer-logo"></div>
+            <div class="copyright">© 1996-2023, Amazon.com, Inc. or its affiliates</div>
+        </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

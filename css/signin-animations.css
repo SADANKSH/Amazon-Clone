@@ -1,0 +1,219 @@
+/* Amazon Sign-in Page Animations and Enhanced Styles */
+
+/* Initial state for animated elements */
+header, .logo {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header.visible, .logo.visible {
+    opacity: 1;
+}
+
+.loginbox {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.loginbox.appear {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Input field focus effects */
+.inputbox, .pass1 {
+    position: relative;
+    transition: all 0.3s;
+}
+
+.inputbox::after, .pass1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FF9900;
+    transition: width 0.3s ease;
+}
+
+.inputbox.focused::after, .pass1.focused::after {
+    width: 100%;
+}
+
+.inputbox input, .pass1 input {
+    width: 180px;
+    padding: 8px;
+    border: 1px solid #a6a6a6;
+    border-radius: 3px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.inputbox.focused input, .pass1.focused input {
+    border-color: #FF9900;
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+}
+
+.inputbox.error input {
+    border-color: #d00;
+    box-shadow: 0 0 5px rgba(221, 0, 0, 0.5);
+}
+
+/* Button animations */
+button {
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+button.hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    filter: brightness(1.05);
+}
+
+button.active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.95);
+}
+
+button.clicked {
+    animation: pulse 0.3s forwards;
+}
+
+/* Amazon branded styles */
+.Util button {
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border-color: #a88734 #9c7e31 #846a29;
+    width: 100%;
+    height: 30px;
+}
+
+.newuser button {
+    background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    width: 100%;
+    color: #111;
+}
+
+/* Password toggle style with eye icon */
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #767676;
+}
+
+.eye-icon {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.eye-icon::before, 
+.eye-icon::after {
+    content: '';
+    position: absolute;
+}
+
+/* Eye closed icon (default state) */
+.eye-closed::before {
+    width: 16px;
+    height: 8px;
+    border: 1.5px solid #767676;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom: 0;
+    top: 4px;
+    left: 0;
+}
+
+.eye-closed::after {
+    width: 4px;
+    height: 4px;
+    background-color: #767676;
+    border-radius: 50%;
+    top: 6px;
+    left: 6px;
+}
+
+/* Eye open icon */
+.eye-open::before {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #767676;
+    border-radius: 75% 15%;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+}
+
+.eye-open::after {
+    width: 6px;
+    height: 6px;
+    background-color: #767676;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+}
+
+.password-toggle:hover .eye-closed::before,
+.password-toggle:hover .eye-closed::after,
+.password-toggle:hover .eye-open::before,
+.password-toggle:hover .eye-open::after {
+    border-color: #0066c0;
+    background-color: #0066c0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.shake {
+    animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translateX(-1px); }
+    20%, 80% { transform: translateX(2px); }
+    30%, 50%, 70% { transform: translateX(-4px); }
+    40%, 60% { transform: translateX(4px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        height: 200px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .loginbox {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .newuser {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+} 
